@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>게임</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<p id="story"></p>
+
+    <div id="hide1">
+    <input type="radio" name="sex" id="Button1" class="Button">
+    <p id="choice1">시작할래!</p>
+    </div>
+
+    <div id="hide2">
+    <input type="radio" name="sex" id="Button2" class="Button">
+    <p id="choice2">다음에 할래</p>
+    </div>
+
+    <div id="hide3">
+    <input type="radio" name="sex" id="Button3" class="Button">
+    <p id="choice3">아무생각없음</p>
+    </div>
+
+    <button type="button" id="button" onclick="myFunction()">Continue</button>
+
+    <div id="hide4">
+    	
+    </div>
+
+
+<script type="text/javascript">
+	
+var Choix = 
+    ["당신은 과제에 파묻혀 있는 평범한 디자인과 학생입니다. 당신의 목표는 주인공인 용사를 무사히 밤이 되기 전까지 재우지 않고 일상생활을 헤쳐 나가는 것 입니다. 게임시작 블라블라",
+    "날씨를 선택해주세요",   
+     "오늘은 날씨가 맑다! 따뜻한 하루가 될거 같아! 아침이 되었다. 용사는 아침밥을 먹을것 인가?",   
+     "오늘은 날씨가 흐리군. 그냥그래. 아침이 되었다. 용사는 아침밥을 먹을것 인가?",
+     "오늘은 비가 온다! 추울것 같아. 아침이 되었다. 용사는 아침밥을 먹을것 인가?",
+     "오늘의 수업은 뭘까?",   
+     "안녕 용사! 지금 쉬는 시간인데 편의점이나 갔다 올까?"];
+
+    window.onload = function()
+    {
+         document.getElementById("story").innerHTML = Choix[0];
+    }
+
+    function myFunction()
+    {
+        var story = document.getElementById("story").innerHTML;
+        var button_1_checked = document.getElementById('Button1').checked;
+        var button_2_checked = document.getElementById('Button2').checked;
+        var button_3_checked = document.getElementById('Button3').checked;
+
+        if ( story == Choix[0] )
+           {
+                if ( button_1_checked ) 
+                {
+                document.getElementById("story").innerHTML = Choix[1];
+                document.getElementById('choice1').innerHTML = "맑음";
+                document.getElementById('choice2').innerHTML = "흐림";
+                document.getElementById('choice3').innerHTML = "비";
+                }
+                else if ( button_2_checked ) 
+                {
+                  document.getElementById('hide4').innerHTML = "";  
+                }
+                else if ( button_3_checked ) 
+                {
+                  document.getElementById('hide4').innerHTML = "";  
+                }
+           }
+
+        if ( story == Choix[1] )
+            {
+                if ( button_1_checked ) 
+                {
+                document.getElementById("story").innerHTML = Choix[2];
+                document.getElementById('choice1').innerHTML = "먹는다";
+                document.getElementById('choice2').innerHTML = "안먹는다";
+                document.getElementById('choice3').innerHTML = "지각이다";
+                }
+                else if ( button_2_checked ) 
+                {
+                document.getElementById("story").innerHTML = Choix[3];
+                document.getElementById('choice1').innerHTML = "먹는다";
+                document.getElementById('choice2').innerHTML = "안먹는다";
+                document.getElementById('choice3').innerHTML = "지각이다";
+                }
+                else if ( button_3_checked ) 
+                {
+                document.getElementById("story").innerHTML = Choix[4];
+                document.getElementById('choice1').innerHTML = "먹는다";
+                document.getElementById('choice2').innerHTML = "안먹는다";
+                document.getElementById('choice3').innerHTML = "지각이다";
+                }
+            }
+
+        if ( story == Choix[2] )
+            {
+                if ( button_1_checked ) 
+                {
+                document.getElementById("story").innerHTML = Choix[5];
+                document.getElementById('choice1').innerHTML = "A";
+                document.getElementById('choice2').innerHTML = "B";
+                document.getElementById('choice3').innerHTML = "C";
+                }
+                else if ( button_2_checked ) 
+                {
+                 document.getElementById("story").innerHTML = Choix[5];
+                document.getElementById('choice1').innerHTML = "A";
+                document.getElementById('choice2').innerHTML = "B";
+                document.getElementById('choice3').innerHTML = "C";
+                }
+                else if ( button_3_checked ) 
+                {
+                document.getElementById("story").innerHTML = Choix[5];
+                document.getElementById('choice1').innerHTML = "A";
+                document.getElementById('choice2').innerHTML = "B";
+                document.getElementById('choice3').innerHTML = "C";
+                }
+            }
+
+    	if ( story == Choix[3] )
+            {
+                if ( button_1_checked ) 
+                {
+                document.getElementById("story").innerHTML = Choix[5];
+                document.getElementById('choice1').innerHTML = "A";
+                document.getElementById('choice2').innerHTML = "B";
+                document.getElementById('choice3').innerHTML = "C";
+                }
+                else if ( button_2_checked ) 
+                {
+                 document.getElementById("story").innerHTML = Choix[5];
+                document.getElementById('choice1').innerHTML = "A";
+                document.getElementById('choice2').innerHTML = "B";
+                document.getElementById('choice3').innerHTML = "C";
+                }
+                else if ( button_3_checked ) 
+                {
+                document.getElementById("story").innerHTML = Choix[5];
+                document.getElementById('choice1').innerHTML = "A";
+                document.getElementById('choice2').innerHTML = "B";
+                document.getElementById('choice3').innerHTML = "C";
+                }
+            }
+
+        if ( story == Choix[4] )
+            {
+                if ( button_1_checked ) 
+                {
+                document.getElementById("story").innerHTML = Choix[5];
+                document.getElementById('choice1').innerHTML = "A";
+                document.getElementById('choice2').innerHTML = "B";
+                document.getElementById('choice3').innerHTML = "C";
+                }
+                else if ( button_2_checked ) 
+                {
+                 document.getElementById("story").innerHTML = Choix[5];
+                document.getElementById('choice1').innerHTML = "A";
+                document.getElementById('choice2').innerHTML = "B";
+                document.getElementById('choice3').innerHTML = "C";
+                }
+                else if ( button_3_checked ) 
+                {
+                document.getElementById("story").innerHTML = Choix[5];
+                document.getElementById('choice1').innerHTML = "A";
+                document.getElementById('choice2').innerHTML = "B";
+                document.getElementById('choice3').innerHTML = "C";
+                }
+            }
+
+        //a set of if statements for each Story / 'TEST'
+        //...
+
+
+        if ( button_1_checked == false && button_2_checked == false && button_3_checked == false)
+           {    
+               alert("Please make a choice first!");
+               return;
+           }
+
+        document.getElementById('Button1').checked = false;
+        document.getElementById('Button2').checked = false;
+        document.getElementById('Button3').checked = false;
+    }
+</script>
+
+</body>
+</html>
